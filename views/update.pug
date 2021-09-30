@@ -1,0 +1,26 @@
+html
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title UPDATE REST&nbsp;API
+		link(rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css")
+	body
+		div.container
+			form(method="POST" action="/update/"+user._id)
+				div.form-group
+					label(for="id") ID
+					input.form-control(type="text" placeholder="ID" name="id" value= user._id)
+				div.form-group
+					label(for="name") Name
+					input.form-control(type="text" placeholder="Name" name="name" value= user.name)
+				div.form-group
+					label(for="lastname") Last name
+					input.form-control(type="text" placeholder="Last name" name="lastname" value= user.lastname)
+				div.form-group
+					label(for="email") Email
+					input.form-control(type="email" placeholder="Email" name="email" value= user.email)
+				div.form-group
+					label(for="password") Password
+					input.form-control(type="password" placeholder="Password" name="password" value= user.password)
+				div.form-group
+					input.btn.btn-warning(type="submit" name="insert" value="Update")

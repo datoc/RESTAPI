@@ -1,0 +1,28 @@
+html
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title REST&nbsp;API Details
+		link(rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css")
+	body
+		div.container
+			table.table.table.response.table-bordered.table-hover
+				tr
+					th ID
+					th Name
+					th Last name
+					th Email
+					th Password
+					th Update
+					th Delete
+				each posts in users
+					tr
+						th= posts._id
+						th= posts.name
+						th= posts.lastname
+						th= posts.email
+						th= posts.password
+						th
+							a.btn.btn-success(href="/update/" + posts._id) Update
+						th
+							a.btn.btn-danger(href="/delete/" + posts._id) Delete
