@@ -122,7 +122,7 @@ app.post("/update/:id", function(request, response) {
 	})
 });
 
-app.listen(process.env.PORT, function(err) {
+app.listen(process.env.PORT | 3000, function(err) {
 	if(err) throw err;
 	console.log("Server is ready...");
 });
